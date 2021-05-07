@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FA01BB35"
+    tools:context=".registration.SuccessFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Поздравляем. Ваш номер подтвержден."
+        android:textColor="#FFFFFF"
+        android:textSize="26sp" />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="66dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/success"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/img"
+        android:textColor="@color/black"
+        android:layout_marginTop="24dp"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/btn_go"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/corner_radius_10_white"
+        android:text="Начать"
+        android:textAllCaps="false"
+        android:textColor="#404040" />
+
+</RelativeLayout>
