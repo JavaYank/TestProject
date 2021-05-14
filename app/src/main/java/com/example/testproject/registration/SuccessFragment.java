@@ -4,11 +4,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
 import com.example.testproject.R;
+import com.example.testproject.main.MainActivity;
 
 public class SuccessFragment extends Fragment {
 
@@ -40,9 +40,7 @@ public class SuccessFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_success, container, false);
 
-        TextView tvData = view.findViewById(R.id.tv_data);
-
-        view.findViewById(R.id.btn_go).setOnClickListener(v -> tvData.setText("Email: " + email + "\nPhone: " + phone));
+        view.findViewById(R.id.btn_go).setOnClickListener(v -> MainActivity.start(getActivity()));
 
         return view;
     }

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <ImageView
         android:id="@+id/img"
@@ -17,7 +18,6 @@
         android:id="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/img"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginRight="16dp"
@@ -28,11 +28,12 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/tv"
+        android:layout_height="0dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginRight="16dp"
+        android:layout_weight="1"
+        android:minHeight="180dp"
         android:text="Шаг первый"
         android:textColor="#959595"
         android:textSize="16sp" />
@@ -40,7 +41,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/edit_text"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="14dp"
         android:fontFamily="sans-serif-medium"
@@ -52,23 +52,21 @@
         android:id="@+id/edit_text"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_above="@id/tv_prompt"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="12dp"
         android:background="@drawable/corner_radius_10_gray_edittext"
-        android:ellipsize="end"
+        android:importantForAutofill="noExcludeDescendants"
+        android:inputType="textEmailAddress"
         android:maxLines="1"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-        android:textColor="#001AFF"
-        tools:ignore="KeyboardInaccessibleWidget" />
+        android:textColor="#001AFF" />
 
     <TextView
         android:id="@+id/tv_prompt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/line"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="47dp"
@@ -80,14 +78,12 @@
         android:id="@+id/line"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_above="@id/tv_offer"
         android:background="#F8F8F8" />
 
     <TextView
         android:id="@+id/tv_offer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/btn_layout"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="21dp"
         android:layout_marginRight="16dp"
@@ -97,8 +93,7 @@
     <RelativeLayout
         android:id="@+id/btn_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/btn_next"
@@ -108,7 +103,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="24dp"
-            android:background="@drawable/corner_radius_10_white"
+            android:background="@drawable/button_enabled"
             android:text="Продолжить"
             android:textAllCaps="false"
             android:textColor="#696969" />
@@ -125,4 +120,4 @@
 
     </RelativeLayout>
 
-</RelativeLayout>
+</LinearLayout>

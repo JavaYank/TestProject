@@ -12,10 +12,11 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.example.testproject.R;
 import com.example.testproject.registration.RegisterActivity;
 import com.example.testproject.startup.adapter.ScreenSlidePagerAdapter;
+import com.example.testproject.utils.ZoomOutPageTransformer;
 
 import me.relex.circleindicator.CircleIndicator3;
 
-public class MainActivity extends AppCompatActivity {
+public class StartupActivity extends AppCompatActivity {
 
     private ViewPager2 viewPager;
     private LinearLayout skipLayout;
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_startup);
         initView();
 
         FragmentStateAdapter pagerAdapter = new ScreenSlidePagerAdapter(this);

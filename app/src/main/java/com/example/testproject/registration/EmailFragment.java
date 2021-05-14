@@ -22,7 +22,7 @@ import com.example.testproject.R;
 
 public class EmailFragment extends Fragment {
 
-    private EditText inputEmail;
+    private EditText inputText;
     private Button btnNext;
     private TextView tvOffer;
     private TextView tvPrompt;
@@ -40,13 +40,13 @@ public class EmailFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_email, container, false);
 
-        inputEmail = view.findViewById(R.id.edit_text);
+        inputText = view.findViewById(R.id.edit_text);
         btnNext = view.findViewById(R.id.btn_next);
         tvOffer = view.findViewById(R.id.tv_offer);
         tvPrompt = view.findViewById(R.id.tv_prompt);
         progressBar = view.findViewById(R.id.progress_bar);
 
-        inputEmail.addTextChangedListener(new TextWatcher() {
+        inputText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -87,7 +87,7 @@ public class EmailFragment extends Fragment {
     }
 
     private void replaceFragment() {
-        ((RegisterActivity) getActivity()).replaceFragment(PhoneFragment.newInstance(inputEmail.getText().toString().trim()));
+        ((RegisterActivity) getActivity()).replaceFragment(PhoneFragment.newInstance(inputText.getText().toString().trim()));
     }
 
     public void hideSoftInput(final View view) {
@@ -98,17 +98,17 @@ public class EmailFragment extends Fragment {
 
     private void checkValidation() {
         boolean isValid = false;
-        if (inputEmail.length() > 0) {
+        if (inputText.length() > 0) {
             isValid = true;
         }
 
-        inputEmail.setBackgroundResource(isValid ? R.drawable.corner_radius_10_purple_edittext : R.drawable.corner_radius_10_gray_edittext);
+        inputText.setBackgroundResource(isValid ? R.drawable.corner_radius_10_purple_edittext : R.drawable.corner_radius_10_gray_edittext);
 
         tvPrompt.setText(isValid ? "Отлично! Нажмите кнопку Продолжить" : "После этого вы сможете войти в приложение");
         tvPrompt.setTextColor(isValid ? Color.parseColor("#001AFF") : Color.parseColor("#959595"));
 
         btnNext.setEnabled(isValid);
-        btnNext.setBackgroundResource(isValid ? R.drawable.corner_radius_10_white : R.drawable.corner_radius_10_gray);
+        btnNext.setBackgroundResource(isValid ? R.drawable.button_enabled : R.drawable.button_disabled);
         btnNext.setTextColor(isValid ? Color.parseColor("#404040") : Color.parseColor("#696969"));
     }
 }

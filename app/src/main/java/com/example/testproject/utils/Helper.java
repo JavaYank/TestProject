@@ -1,4 +1,4 @@
-package com.example.testproject.Utils;
+package com.example.testproject.utils;
 
 public class Helper {
     public static CharSequence getOnlyDigits(String string) {

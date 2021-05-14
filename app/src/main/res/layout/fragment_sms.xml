@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <ImageView
@@ -33,8 +34,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginRight="16dp"
         android:layout_weight="1"
-        android:minHeight="180dp"
-        android:text="Шаг второй"
+        android:text="Шаг третий"
         android:textColor="#959595"
         android:textSize="16sp" />
 
@@ -44,7 +44,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="14dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Введите ваш номер телефона"
+        android:text="Введите код из SMS"
         android:textColor="#000000"
         android:textSize="16sp" />
 
@@ -58,8 +58,7 @@
         android:background="@drawable/corner_radius_10_gray_edittext"
         android:digits="+0123456789 "
         android:ellipsize="end"
-        android:importantForAutofill="noExcludeDescendants"
-        android:inputType="phone"
+        android:inputType="numberDecimal"
         android:maxLines="1"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
@@ -73,7 +72,19 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="47dp"
-        android:text="После этого вы сможете войти в приложение"
+        android:text="Отлично! Нажмите кнопку Продолжить"
+        android:textColor="#001AFF"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_counter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="47dp"
+        android:text="0:10"
         android:textColor="#959595"
         android:textSize="14sp" />
 
@@ -93,20 +104,49 @@
         android:text="Создавая аккаунт вы соглашаетесь с обработкой персональных данных, условием использования и политикой приватности." />
 
     <RelativeLayout
-        android:id="@+id/btn_layout"
+        android:id="@+id/btn_send_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/btn_next"
+            android:id="@+id/btn_send"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="24dp"
             android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_enabled"
+            android:text="Отправить"
+            android:textAllCaps="false"
+            android:textColor="#696969" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_send"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerInParent="true"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="85"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_sms_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_sms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
             android:layout_marginBottom="24dp"
             android:background="@drawable/button_enabled"
-            android:text="Продолжить"
+            android:text="Запросить код заново"
             android:textAllCaps="false"
             android:textColor="#696969" />
 

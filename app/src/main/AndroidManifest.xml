@@ -9,10 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TestProject">
-        <activity
-            android:name=".registration.RegisterActivity"
-            android:windowSoftInputMode="stateHidden|adjustResize" />
-        <activity android:name=".startup.MainActivity">
+        <activity android:name=".main.MainActivity" />
+        <activity android:name=".registration.RegisterActivity" />
+        <activity android:name=".startup.StartupActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

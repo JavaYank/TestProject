@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FA01BB35"
+    android:background="@drawable/success_green_gradient"
     tools:context=".registration.SuccessFragment">
 
     <TextView
@@ -25,16 +25,6 @@
         android:src="@mipmap/success"
         tools:ignore="ContentDescription" />
 
-    <TextView
-        android:id="@+id/tv_data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/img"
-        android:textColor="@color/black"
-        android:layout_marginTop="24dp"
-        android:textSize="16sp"/>
-
     <Button
         android:id="@+id/btn_go"
         android:layout_width="match_parent"
@@ -43,7 +33,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="24dp"
-        android:background="@drawable/corner_radius_10_white"
+        android:background="@drawable/button_enabled"
         android:text="Начать"
         android:textAllCaps="false"
         android:textColor="#404040" />

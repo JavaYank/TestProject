@@ -107,7 +107,7 @@ public class PhoneFragment extends Fragment {
     }
 
     private void replaceFragment() {
-        ((RegisterActivity) getActivity()).addFragment(SuccessFragment.newInstance(email, inputPhone.getText().toString().trim()));
+        ((RegisterActivity) getActivity()).addFragment(SmsFragment.newInstance(email, inputPhone.getText().toString().trim()));
     }
 
     public void hideSoftInput(final View view) {
@@ -141,7 +141,7 @@ public class PhoneFragment extends Fragment {
         tvPrompt.setTextColor(isValid ? Color.parseColor("#001AFF") : Color.parseColor("#959595"));
 
         btnNext.setEnabled(isValid);
-        btnNext.setBackgroundResource(isValid ? R.drawable.corner_radius_10_white : R.drawable.corner_radius_10_gray);
+        btnNext.setBackgroundResource(isValid ? R.drawable.button_enabled : R.drawable.button_disabled);
         btnNext.setTextColor(isValid ? Color.parseColor("#404040") : Color.parseColor("#696969"));
     }
 }

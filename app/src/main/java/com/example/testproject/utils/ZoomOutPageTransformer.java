@@ -1,4 +1,4 @@
-package com.example.testproject.startup;
+package com.example.testproject.utils;
 
 import android.view.View;
 
