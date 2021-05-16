@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:src="@mipmap/ic_setting_blue"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:fontFamily="@font/tt_interfaces_medium"
+        android:text="Как это работает?"
+        android:textColor="#404040"
+        android:textSize="@dimen/_20sdp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:fontFamily="@font/tt_norms_medium"
+        android:text="Умный цифровой секретарь отвечает на входящий звонок, отправляя вам текстовую интерпретацию диалога."
+        android:textColor="#959595"
+        android:textSize="@dimen/_12sdp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_1"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:src="@mipmap/img_phone"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="@dimen/_240sdp"
+            android:layout_below="@id/img_1"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_minus45sdp"
+            android:src="@mipmap/img_snake"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/img_1"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@id/img_1"
+            android:layout_marginLeft="@dimen/_36sdp"
+            android:layout_marginRight="@dimen/_36sdp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitEnd"
+            android:src="@mipmap/img_man"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_layout"
+            android:layout_marginBottom="@dimen/_18sdp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:layout_weight="1"
+                android:background="@drawable/corner_blue_dialog"
+                android:padding="@dimen/_12sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/tt_norms_medium"
+                    android:text="Привет! Это Сергей из МТС, у нас есть предложение для вас."
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/_10sdp" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:background="@drawable/button_enabled"
+                android:fontFamily="@font/tt_norms_bold"
+                android:text="Продолжить"
+                android:textSize="@dimen/_10sdp"
+                android:textAllCaps="false"
+                android:textColor="#404040" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerInParent="true"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="85"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

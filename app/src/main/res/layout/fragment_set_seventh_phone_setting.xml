@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/skip_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/_4sdp"
+        tools:ignore="UseCompoundDrawables">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tt_norms_medium"
+            android:text="Пропустить"
+            android:textColor="#001AFF"
+            android:textSize="@dimen/_10sdp" />
+
+        <ImageView
+            android:layout_width="@dimen/_8sdp"
+            android:layout_height="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:src="@mipmap/skip_arrow"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:src="@mipmap/ic_setting_blue"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:fontFamily="@font/tt_interfaces_medium"
+        android:text="Включите настройки в телефоне. "
+        android:textColor="#404040"
+        android:textSize="@dimen/_20sdp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:fontFamily="@font/tt_norms_medium"
+        android:text="Вы сможете легко изменить эти настройки позже"
+        android:textColor="#959595"
+        android:textSize="@dimen/_12sdp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:background="@drawable/stroke_gray"
+        android:padding="@dimen/_6sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tt_norms_medium"
+            android:text="Перейти в настройки"
+            android:textColor="#001AFF"
+            android:textSize="@dimen/_10sdp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/_36sdp"
+            android:layout_marginRight="@dimen/_36sdp"
+            android:scaleType="fitEnd"
+            android:src="@mipmap/img_phone_setting"
+            tools:ignore="ContentDescription" />
+
+        <RelativeLayout
+            android:id="@+id/btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/button_enabled"
+                android:fontFamily="@font/tt_norms_bold"
+                android:text="Продолжить"
+                android:textSize="@dimen/_10sdp"
+                android:textAllCaps="false"
+                android:textColor="#404040" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerInParent="true"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="85"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -38,7 +38,7 @@ public class EmailFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_email, container, false);
+        View view = inflater.inflate(R.layout.fragment_registration_email, container, false);
 
         inputText = view.findViewById(R.id.edit_text);
         btnNext = view.findViewById(R.id.btn_next);
@@ -78,7 +78,7 @@ public class EmailFragment extends Fragment {
                     btnNext.setText("Продолжить");
                     btnNext.setEnabled(true);
                 }
-            }, 2000);
+            }, 1000);
         });
 
         checkValidation();
@@ -87,7 +87,7 @@ public class EmailFragment extends Fragment {
     }
 
     private void replaceFragment() {
-        ((RegisterActivity) getActivity()).replaceFragment(PhoneFragment.newInstance(inputText.getText().toString().trim()));
+        ((RegisterActivity) getActivity()).addFragment(PhoneFragment.newInstance(inputText.getText().toString().trim()));
     }
 
     public void hideSoftInput(final View view) {

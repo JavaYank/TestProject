@@ -5,13 +5,13 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.testproject.startup.FirstFragment;
-import com.example.testproject.startup.SecondFragment;
-import com.example.testproject.startup.ThirdFragment;
+import com.example.testproject.startup.FirstStartupFragment;
+import com.example.testproject.startup.SecondSecondFragment;
+import com.example.testproject.startup.ThirdStartupFragment;
 
 public class ScreenSlidePagerAdapter extends FragmentStateAdapter {
 
-    private final Fragment[] fragmentArray = new Fragment[]{new FirstFragment(), new SecondFragment(), new ThirdFragment()};
+    private final Fragment[] fragmentArray = new Fragment[]{new FirstStartupFragment(), new SecondSecondFragment(), new ThirdStartupFragment()};
 
     public ScreenSlidePagerAdapter(FragmentActivity fa) {
         super(fa);

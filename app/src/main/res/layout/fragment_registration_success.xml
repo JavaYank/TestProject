@@ -9,18 +9,18 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="46dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:layout_marginRight="@dimen/_12sdp"
         android:fontFamily="sans-serif-medium"
         android:text="Поздравляем. Ваш номер подтвержден."
         android:textColor="#FFFFFF"
-        android:textSize="26sp" />
+        android:textSize="@dimen/_20sdp" />
 
     <ImageView
         android:id="@+id/img"
-        android:layout_width="66dp"
-        android:layout_height="80dp"
+        android:layout_width="@dimen/_56sdp"
+        android:layout_height="@dimen/_74sdp"
         android:layout_centerInParent="true"
         android:src="@mipmap/success"
         tools:ignore="ContentDescription" />
@@ -28,14 +28,16 @@
     <Button
         android:id="@+id/btn_go"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_36sdp"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
         android:background="@drawable/button_enabled"
+        android:fontFamily="@font/tt_norms_bold"
         android:text="Начать"
         android:textAllCaps="false"
-        android:textColor="#404040" />
+        android:textColor="#404040"
+        android:textSize="@dimen/_10sdp" />
 
 </RelativeLayout>

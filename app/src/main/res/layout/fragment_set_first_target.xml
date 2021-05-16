@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:src="@mipmap/ic_setting_blue"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:fontFamily="@font/tt_interfaces_medium"
+        android:text="Для каких целей вы используете этот телефон?"
+        android:textColor="#404040"
+        android:textSize="@dimen/_20sdp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:layout_weight="1"
+        android:fontFamily="@font/tt_norms_medium"
+        android:text="Выберете один из пунктов, который наиболее точно описывает ваши потребности"
+        android:textColor="#959595"
+        android:textSize="@dimen/_12sdp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:background="@drawable/stroke_gray"
+        android:paddingTop="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_12sdp">
+
+        <ImageView
+            android:id="@+id/img_icon"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:src="@mipmap/ic_chat_green"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_toEndOf="@id/img_icon"
+            android:fontFamily="@font/tt_norms_medium"
+            android:text="Рабочий телефон "
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_toEndOf="@id/img_icon"
+            android:fontFamily="@font/tt_norms_medium"
+            android:text="Умный цифровой секретарь с выделеным номером , с ответом в не рабочее время."
+            android:textColor="#696969"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:background="@drawable/stroke_gray"
+        android:paddingTop="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_12sdp">
+
+        <ImageView
+            android:id="@+id/img_icon_"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:src="@mipmap/ic_chat_blue"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_toEndOf="@id/img_icon_"
+            android:fontFamily="@font/tt_norms_medium"
+            android:text="Личный телефон."
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_1"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_toEndOf="@id/img_icon_"
+            android:fontFamily="@font/tt_norms_medium"
+            android:text="Умный цифровой секретарь отвечает на ваши звонки, предоставляет по ним информацию и блокирует спам"
+            android:textColor="#696969"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:background="@drawable/button_enabled"
+            android:fontFamily="@font/tt_norms_bold"
+            android:text="Продолжить"
+            android:textSize="@dimen/_10sdp"
+            android:textAllCaps="false"
+            android:textColor="#404040" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerInParent="true"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="85"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

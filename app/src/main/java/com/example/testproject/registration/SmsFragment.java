@@ -1,6 +1,7 @@
 package com.example.testproject.registration;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -61,7 +63,7 @@ public class SmsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_sms, container, false);
+        View view = inflater.inflate(R.layout.fragment_registration_sms, container, false);
         initView(view);
 
         inputSmsCode.addTextChangedListener(new TextWatcher() {
@@ -98,7 +100,7 @@ public class SmsFragment extends Fragment {
                     btnSend.setText("Отправить");
                     btnSend.setEnabled(true);
                 }
-            }, 2000);
+            }, 1000);
         });
 
         return view;
@@ -154,7 +156,6 @@ public class SmsFragment extends Fragment {
             btnSmsLayout.setVisibility(View.VISIBLE);
         }
 
-        Log.d("TAG", "checkValidation: " + isValid);
         tvPrompt.setVisibility(isValid ? View.VISIBLE : View.GONE);
         tvCounter.setVisibility(isValid ? View.GONE : View.VISIBLE);
 

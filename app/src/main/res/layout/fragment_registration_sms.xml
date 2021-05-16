@@ -8,70 +8,75 @@
 
     <ImageView
         android:id="@+id/img"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:src="@mipmap/smile"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:src="@mipmap/ic_smile_blue"
         tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginRight="16dp"
-        android:fontFamily="sans-serif-medium"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:fontFamily="@font/tt_interfaces_medium"
         android:text="Привет. Начнем регистрацию?"
         android:textColor="#404040"
-        android:textSize="26sp" />
+        android:textSize="@dimen/_20sdp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginRight="@dimen/_12sdp"
         android:layout_weight="1"
+        android:fontFamily="@font/tt_norms_medium"
         android:text="Шаг третий"
         android:textColor="#959595"
-        android:textSize="16sp" />
+        android:textSize="@dimen/_12sdp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="14dp"
-        android:fontFamily="sans-serif-medium"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:fontFamily="@font/tt_norms_medium"
         android:text="Введите код из SMS"
         android:textColor="#000000"
-        android:textSize="16sp" />
+        android:textSize="@dimen/_12sdp" />
 
     <EditText
         android:id="@+id/edit_text"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="12dp"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:background="@drawable/corner_radius_10_gray_edittext"
         android:digits="+0123456789 "
         android:ellipsize="end"
+        android:fontFamily="@font/tt_norms_medium"
         android:inputType="numberDecimal"
         android:maxLines="1"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:textColor="#001AFF"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/_10sdp"
         tools:ignore="KeyboardInaccessibleWidget" />
 
     <TextView
         android:id="@+id/tv_prompt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="47dp"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_38sdp"
+        android:fontFamily="@font/tt_norms_medium"
         android:text="Отлично! Нажмите кнопку Продолжить"
         android:textColor="#001AFF"
         android:textSize="14sp"
@@ -81,12 +86,13 @@
         android:id="@+id/tv_counter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="47dp"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_38sdp"
+        android:fontFamily="@font/tt_norms_medium"
         android:text="0:10"
         android:textColor="#959595"
-        android:textSize="14sp" />
+        android:textSize="@dimen/_10sdp" />
 
     <View
         android:id="@+id/line"
@@ -98,10 +104,12 @@
         android:id="@+id/tv_offer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginRight="16dp"
-        android:text="Создавая аккаунт вы соглашаетесь с обработкой персональных данных, условием использования и политикой приватности." />
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:fontFamily="@font/tt_norms_medium"
+        android:text="Создавая аккаунт вы соглашаетесь с обработкой персональных данных, условием использования и политикой приватности."
+        android:textSize="@dimen/_10sdp" />
 
     <RelativeLayout
         android:id="@+id/btn_send_layout"
@@ -111,15 +119,17 @@
         <Button
             android:id="@+id/btn_send"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
             android:background="@drawable/button_enabled"
+            android:fontFamily="@font/tt_norms_bold"
             android:text="Отправить"
             android:textAllCaps="false"
-            android:textColor="#696969" />
+            android:textColor="#696969"
+            android:textSize="14sp" />
 
         <ProgressBar
             android:id="@+id/progress_bar_send"
@@ -141,14 +151,16 @@
         <Button
             android:id="@+id/btn_sms"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="24dp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
             android:background="@drawable/button_enabled"
+            android:fontFamily="@font/tt_norms_bold"
             android:text="Запросить код заново"
             android:textAllCaps="false"
-            android:textColor="#696969" />
+            android:textColor="#404040"
+            android:textSize="@dimen/_10sdp" />
 
         <ProgressBar
             android:id="@+id/progress_bar"

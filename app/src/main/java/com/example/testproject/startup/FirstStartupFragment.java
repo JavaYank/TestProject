@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 
 import com.example.testproject.R;
 
-public class FirstFragment extends Fragment {
+public class FirstStartupFragment extends Fragment {
 
-    public FirstFragment() {
+    public FirstStartupFragment() {
         // Required empty public constructor
     }
 

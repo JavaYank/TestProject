@@ -54,7 +54,7 @@ public class PhoneFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_phone, container, false);
+        View view = inflater.inflate(R.layout.fragment_registration_phone, container, false);
 
         inputPhone = view.findViewById(R.id.edit_text);
         tvPrompt = view.findViewById(R.id.tv_prompt);
@@ -98,7 +98,7 @@ public class PhoneFragment extends Fragment {
                     btnNext.setText("Продолжить");
                     btnNext.setEnabled(true);
                 }
-            }, 2000);
+            }, 1000);
         });
 
         checkValidation();
