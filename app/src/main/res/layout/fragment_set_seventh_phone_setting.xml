@@ -9,7 +9,7 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/skip_layout"
+        android:id="@+id/open_setting_layout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/tt_norms_medium"
-            android:text="Пропустить"
+            android:text="Перейти в настройки"
             android:textColor="#001AFF"
             android:textSize="@dimen/_10sdp" />
 
@@ -66,6 +66,7 @@
         android:textSize="@dimen/_12sdp" />
 
     <RelativeLayout
+        android:id="@+id/open_setting_layout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/_12sdp"

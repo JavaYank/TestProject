@@ -66,8 +66,7 @@
         android:paddingRight="@dimen/_12sdp"
         android:textColor="#001AFF"
         android:textCursorDrawable="@null"
-        android:textSize="@dimen/_10sdp"
-        android:text="asdfsadf"/>
+        android:textSize="@dimen/_10sdp"/>
 
     <TextView
         android:id="@+id/tv_prompt"

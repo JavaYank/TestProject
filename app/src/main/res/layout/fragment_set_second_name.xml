@@ -8,11 +8,38 @@
     android:focusable="true"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:id="@+id/skip_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/_4sdp"
+        tools:ignore="UseCompoundDrawables">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tt_norms_medium"
+            android:text="Пропустить"
+            android:textColor="#001AFF"
+            android:textSize="@dimen/_10sdp" />
+
+        <ImageView
+            android:layout_width="@dimen/_8sdp"
+            android:layout_height="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:src="@mipmap/skip_arrow"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
     <ImageView
         android:layout_width="@dimen/_36sdp"
         android:layout_height="@dimen/_36sdp"
         android:layout_marginStart="@dimen/_12sdp"
-        android:layout_marginTop="@dimen/_16sdp"
         android:src="@mipmap/ic_smile_blue"
         tools:ignore="ContentDescription" />
 

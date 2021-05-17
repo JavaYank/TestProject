@@ -1,12 +1,11 @@
 package com.example.testproject.startup;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +22,8 @@ import me.relex.circleindicator.CircleIndicator3;
 
 public class StartupActivity extends AppCompatActivity {
 
+    private boolean showSplash = true;
+    private FrameLayout splashLayout;
     private ViewPager2 viewPager;
     private LinearLayout skipLayout;
     private Button btnNext;
@@ -33,9 +34,15 @@ public class StartupActivity extends AppCompatActivity {
         setContentView(R.layout.activity_startup);
         initView();
 
+        if (showSplash) {
+            splashLayout.setVisibility(View.VISIBLE);
+            showSplash = false;
+            new Handler().postDelayed(() -> splashLayout.setVisibility(View.GONE), 1500);
+        }
+
         FragmentStateAdapter pagerAdapter = new ScreenSlidePagerAdapter(this);
         viewPager.setAdapter(pagerAdapter);
-        ((RecyclerView)viewPager.getChildAt(0)).setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);
+        ((RecyclerView) viewPager.getChildAt(0)).setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);
 
         CircleIndicator3 indicator = findViewById(R.id.indicator);
         indicator.setViewPager(viewPager);
@@ -59,6 +66,7 @@ public class StartupActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        splashLayout = findViewById(R.id.slash_layout);
         skipLayout = findViewById(R.id.skip_layout);
         btnNext = findViewById(R.id.btn_next);
         viewPager = findViewById(R.id.pager);

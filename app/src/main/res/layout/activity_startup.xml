@@ -1,69 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/skip_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_12sdp"
-        android:layout_marginEnd="@dimen/_12sdp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:padding="@dimen/_8sdp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="UseCompoundDrawables">
+    <FrameLayout
+        android:id="@+id/slash_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180sdp"
+                android:src="@mipmap/img_splash"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_36sdp"
+                android:src="@mipmap/ic_aillo_logo"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="@dimen/_42sdp"
             android:fontFamily="@font/tt_norms_medium"
-            android:text="Пропустить"
-            android:textColor="#001AFF"
+            android:gravity="center"
+            android:text="©2020 AILOO. ООО “Айлло”.\nВсе права защищены."
+            android:textColor="#959595"
             android:textSize="@dimen/_10sdp" />
 
-        <ImageView
-            android:layout_width="@dimen/_8sdp"
-            android:layout_height="@dimen/_8sdp"
-            android:layout_marginStart="@dimen/_4sdp"
-            android:src="@mipmap/skip_arrow"
-            tools:ignore="ContentDescription" />
+    </FrameLayout>
 
-    </LinearLayout>
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/pager"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHeight_default="spread"
-        app:layout_constraintTop_toBottomOf="@id/skip_layout" />
+        android:layout_height="match_parent">
 
-    <me.relex.circleindicator.CircleIndicator3
-        android:id="@+id/indicator"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_48sdp"
-        app:layout_constraintBottom_toTopOf="@id/btn_next"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        <LinearLayout
+            android:id="@+id/skip_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_8sdp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UseCompoundDrawables">
 
-    <Button
-        android:id="@+id/btn_next"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_36sdp"
-        android:layout_marginLeft="@dimen/_16sdp"
-        android:layout_marginRight="@dimen/_16sdp"
-        android:layout_marginBottom="@dimen/_24sdp"
-        android:background="@drawable/button_enabled"
-        android:fontFamily="@font/tt_norms_bold"
-        android:text="Далее"
-        android:textAllCaps="false"
-        android:textColor="#404040"
-        android:textSize="@dimen/_10sdp"
-        app:layout_constraintBottom_toBottomOf="parent" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tt_norms_medium"
+                android:text="Пропустить"
+                android:textColor="#001AFF"
+                android:textSize="@dimen/_10sdp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:layout_width="@dimen/_8sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:src="@mipmap/skip_arrow"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_default="spread"
+            app:layout_constraintTop_toBottomOf="@id/skip_layout" />
+
+        <me.relex.circleindicator.CircleIndicator3
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48sdp"
+            app:layout_constraintBottom_toTopOf="@id/btn_next"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginRight="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_24sdp"
+            android:background="@drawable/button_enabled"
+            android:fontFamily="@font/tt_norms_bold"
+            android:text="Далее"
+            android:textAllCaps="false"
+            android:textColor="#404040"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

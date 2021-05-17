@@ -1,5 +1,6 @@
 package com.example.testproject.first_setting;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +20,7 @@ public class EighthPhoneSettingFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private Button btnNext;
+    private int selectedItem = -1;
 
     public EighthPhoneSettingFragment() {
         // Required empty public constructor
@@ -37,14 +39,28 @@ public class EighthPhoneSettingFragment extends Fragment {
 
         RecyclerPhoneOperatorAdapter adapter = new RecyclerPhoneOperatorAdapter(new ArrayList<>());
         adapter.setListener(position -> {
-
+            selectedItem = position;
+            checkValidation();
         });
 
-        btnNext.setOnClickListener(v -> ((FirstSettingActivity)getActivity()).addFragment(NinthInstructionFragment.newInstance()));
+        btnNext.setOnClickListener(v -> ((FirstSettingActivity) getActivity()).addFragment(NinthInstructionFragment.newInstance()));
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(adapter);
+
+        checkValidation();
         return view;
+    }
+
+    private void checkValidation() {
+        boolean isValid = false;
+        if (selectedItem > -1) {
+            isValid = true;
+        }
+
+        btnNext.setBackgroundResource(isValid ? R.drawable.button_enabled : R.drawable.button_disabled);
+        btnNext.setTextColor(isValid ? Color.parseColor("#404040") : Color.parseColor("#696969"));
+        btnNext.setEnabled(isValid);
     }
 }

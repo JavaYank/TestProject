@@ -40,14 +40,16 @@
         android:textSize="16sp" />
 
     <FrameLayout
+        android:id="@+id/greeting_1_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/_12sdp"
         android:layout_marginRight="@dimen/_12sdp"
-        android:background="@drawable/corner_blue_dialog"
+        android:background="@drawable/corner_gray_dialog"
         android:padding="@dimen/_12sdp">
 
         <TextView
+            android:id="@+id/tv_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/tt_norms_medium"
@@ -58,6 +60,7 @@
     </FrameLayout>
 
     <FrameLayout
+        android:id="@+id/greeting_2_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/_12sdp"
@@ -67,6 +70,7 @@
         android:padding="@dimen/_12sdp">
 
         <TextView
+            android:id="@+id/tv_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/tt_norms_medium"
@@ -77,6 +81,7 @@
     </FrameLayout>
 
     <FrameLayout
+        android:id="@+id/greeting_3_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/_12sdp"
@@ -86,6 +91,7 @@
         android:padding="@dimen/_12sdp">
 
         <TextView
+            android:id="@+id/tv_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/tt_norms_medium"
@@ -96,6 +102,7 @@
     </FrameLayout>
 
     <FrameLayout
+        android:id="@+id/greeting_4_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/_12sdp"
@@ -105,6 +112,7 @@
         android:padding="@dimen/_12sdp">
 
         <TextView
+            android:id="@+id/tv_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/tt_norms_medium"
