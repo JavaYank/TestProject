@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_26sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:fontFamily="@font/tt_travels_bold"
+        android:gravity="center"
+        android:text="Получите премиум аккаунт бесплатно!"
+        android:textColor="#08B638"
+        android:textSize="@dimen/_20sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_36sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_36sdp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/_42sdp"
+            android:layout_height="@dimen/_42sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:src="@mipmap/img_girl_free_days"
+            tools:ignore="ContentDescription" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner_black_dialog"
+            android:padding="@dimen/_12sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/tt_norms_medium"
+                android:text="До 3х месяцев в подарок!"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginRight="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_18sdp"
+        android:background="#F8F8F8" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:fontFamily="@font/tt_norms_medium"
+        android:gravity="center"
+        android:text="Поделитесь ссылкой ниже и получите бесплатный месяц использование Aillo за каждого друга, который зарегистрируется."
+        android:textColor="#959595"
+        android:textSize="@dimen/_10sdp" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:background="@drawable/button_enabled"
+        android:fontFamily="@font/tt_norms_bold"
+        android:text="Поделиться"
+        android:textAllCaps="false"
+        android:textColor="#404040"
+        android:textSize="@dimen/_10sdp" />
+
+</LinearLayout>

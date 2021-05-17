@@ -14,6 +14,7 @@ import android.widget.RelativeLayout;
 import androidx.fragment.app.Fragment;
 
 import com.example.testproject.R;
+import com.example.testproject.registration.SuccessFragment;
 
 public class NinthInstructionFragment extends Fragment {
 
@@ -34,6 +35,10 @@ public class NinthInstructionFragment extends Fragment {
         openSettingLayout = view.findViewById(R.id.open_setting_layout);
         btnNext = view.findViewById(R.id.btn_next);
 
+        if (getActivity() != null) {
+            openSettingLayout.setOnClickListener(v -> onClickSetting(getActivity()));
+            btnNext.setOnClickListener(v -> ((FirstSettingActivity) getActivity()).addFragment(SuccessFragment.newInstance(false)));
+        }
 
         return view;
     }

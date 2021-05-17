@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:src="@mipmap/ic_setting_blue"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:fontFamily="@font/tt_interfaces_medium"
+        android:text="Настройки"
+        android:textColor="#404040"
+        android:textSize="@dimen/_20sdp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_account"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_8sdp" />
+
+</LinearLayout>

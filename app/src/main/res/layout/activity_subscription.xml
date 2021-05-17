@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00D43B">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/corner_top_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/_12sdp"
+            android:paddingTop="@dimen/_16sdp"
+            android:paddingRight="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_16sdp">
+
+            <LinearLayout
+                android:id="@+id/subs_month_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/_12sdp"
+                android:paddingBottom="@dimen/_12sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/tt_norms_bold"
+                    android:gravity="center"
+                    android:text="Premium\nмесяц"
+                    android:textColor="#404040"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:fontFamily="@font/tt_travels_bold"
+                    android:gravity="center"
+                    android:text="175 р./мес"
+                    android:textColor="#08B638"
+                    android:textSize="@dimen/_16sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/subs_year_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/_12sdp"
+                android:paddingBottom="@dimen/_12sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/tt_travels_bold"
+                    android:gravity="center"
+                    android:text="Premium\nгод"
+                    android:textColor="#404040"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:fontFamily="@font/tt_norms_bold"
+                    android:gravity="center"
+                    android:text="1500 р./год"
+                    android:textColor="#08B638"
+                    android:textSize="@dimen/_16sdp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_36sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_36sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="@dimen/_42sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:src="@mipmap/img_girl_free_days"
+                tools:ignore="ContentDescription" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corner_black_dialog"
+                android:padding="@dimen/_12sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/tt_norms_medium"
+                    android:text="Попробуйте 7 дней бесплатно!"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginRight="@dimen/_6sdp"
+            android:background="#F8F8F8" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_margin="@dimen/_12sdp"
+                        android:src="@mipmap/ic_subs_item"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/tt_travels_demi_bold"
+                        android:text="Ответ на звонки в приложении"
+                        android:textColor="#404040"
+                        android:textSize="@dimen/_10sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_margin="@dimen/_12sdp"
+                        android:src="@mipmap/ic_subs_item"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/tt_travels_demi_bold"
+                        android:text="Безлимитное количество входящих звонков"
+                        android:textColor="#404040"
+                        android:textSize="@dimen/_10sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_margin="@dimen/_12sdp"
+                        android:src="@mipmap/ic_subs_item"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/tt_travels_demi_bold"
+                        android:text="Расширенная настройка приветствия"
+                        android:textColor="#404040"
+                        android:textSize="@dimen/_10sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_margin="@dimen/_12sdp"
+                        android:src="@mipmap/ic_subs_item"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/tt_travels_demi_bold"
+                        android:text="Выбор голоса секретаря"
+                        android:textColor="#404040"
+                        android:textSize="@dimen/_10sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_margin="@dimen/_12sdp"
+                        android:src="@mipmap/ic_subs_item"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/tt_travels_demi_bold"
+                        android:text="Возможность установки собственного приветствия"
+                        android:textColor="#404040"
+                        android:textSize="@dimen/_10sdp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginRight="@dimen/_6sdp"
+                    android:background="#F8F8F8" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:fontFamily="@font/tt_norms_medium"
+                    android:gravity="center"
+                    android:text="7 дней бесплатно, далее 300 руб. / месяц при единовременной оплате 2500 руб за год. Отменить подписку можно в любое время."
+                    android:textColor="#959595" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:fontFamily="@font/tt_norms_medium"
+                    android:gravity="center"
+                    android:text="Прочитайте также Условия ипользования, и Политику конфиндециальности."
+                    android:textColor="#959595" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:fontFamily="@font/tt_norms_medium"
+                    android:gravity="center"
+                    android:text="Подписка автоматически продлевается, если автопродление не будет отклюено по крайней мере за 24 часа до окончания текущего периода. Для управления подпиской и отключения автоматического продления вы можете перейти в настройки аккаунта AppStore. Деньги будут списаны со счет вашего аккаунта AppStore при подтверждении покупки. Если Вы оформите подписку по истечению срока бесплатной пробной версии, оставшаяся часть бесплатного пробного периода будет аннулирована в момент подтверждения покупки."
+                    android:textColor="#959595" />
+
+                <Button
+                    android:id="@+id/btn_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    android:background="@drawable/button_enabled"
+                    android:fontFamily="@font/tt_norms_bold"
+                    android:text="Восстановить подписку"
+                    android:textAllCaps="false"
+                    android:textColor="#404040"
+                    android:textSize="@dimen/_10sdp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,17 +1,14 @@
 package com.example.testproject.registration;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -118,7 +115,7 @@ public class SmsFragment extends Fragment {
     }
 
     private void replaceFragment() {
-        ((RegisterActivity) getActivity()).addFragment(SuccessFragment.newInstance(email, phone));
+        ((RegisterActivity) getActivity()).addFragment(SuccessFragment.newInstance(true));
     }
 
     public void hideSoftInput(final View view) {

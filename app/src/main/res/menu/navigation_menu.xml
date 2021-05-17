@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_dialog"
+        android:icon="@mipmap/ic_action_dialog"
+        android:title="Диалоги" />
+    <item
+        android:id="@+id/action_account"
+        android:icon="@mipmap/ic_action_account"
+        android:title="Аккаунт" />
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@mipmap/ic_action_setting"
+        android:title="Настройки" />
+</menu>
