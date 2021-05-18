@@ -1,4 +1,4 @@
-package com.example.testproject.first_setting.adapter;
+package com.example.testproject.setting.adapter;
 
 import android.graphics.Color;
 import android.view.LayoutInflater;
@@ -11,32 +11,21 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.testproject.R;
+import com.example.testproject.utils.objects.VoiceItem;
 
 import java.util.List;
 
-public class RecyclerPhoneOperatorAdapter extends RecyclerView.Adapter<RecyclerPhoneOperatorAdapter.ViewHolder> {
+public class RecyclerViewVoicesAdapter extends RecyclerView.Adapter<RecyclerViewVoicesAdapter.ViewHolder> {
 
-    private OnOperatorClickListener listener;
-    private List<String> operatorList;
+    private OnVoiceClickListener listener;
+    private List<VoiceItem> voiceList;
     private ViewHolder lastSelected;
 
-    public RecyclerPhoneOperatorAdapter(List<String> operatorList) {
-        this.operatorList = operatorList;
-        this.operatorList.add("");
-        this.operatorList.add("");
-        this.operatorList.add("");
-        this.operatorList.add("");
-        this.operatorList.add("");
-        this.operatorList.add("");
-        this.operatorList.add("");
-        this.operatorList.add("");
-        this.operatorList.add("");
-        this.operatorList.add("");
-        this.operatorList.add("");
-        this.operatorList.add("");
+    public RecyclerViewVoicesAdapter(List<VoiceItem> voiceList) {
+        this.voiceList = voiceList;
     }
 
-    public void setListener(OnOperatorClickListener listener) {
+    public void setListener(OnVoiceClickListener listener) {
         this.listener = listener;
     }
 
@@ -49,6 +38,10 @@ public class RecyclerPhoneOperatorAdapter extends RecyclerView.Adapter<RecyclerP
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        VoiceItem item = voiceList.get(position);
+        holder.imgIcon.setImageResource(item.getIcon());
+        holder.tvTitle.setText(item.getTitle());
+
         holder.itemView.setOnClickListener(v -> {
             if (lastSelected != null) {
                 lastSelected.itemView.setBackgroundColor(Color.WHITE);
@@ -63,7 +56,7 @@ public class RecyclerPhoneOperatorAdapter extends RecyclerView.Adapter<RecyclerP
 
     @Override
     public int getItemCount() {
-        return operatorList.size();
+        return voiceList.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -81,7 +74,7 @@ public class RecyclerPhoneOperatorAdapter extends RecyclerView.Adapter<RecyclerP
         }
     }
 
-    public interface OnOperatorClickListener {
+    public interface OnVoiceClickListener {
         void onClick(int position);
     }
 }

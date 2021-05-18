@@ -9,23 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TestProject">
+        <activity android:name=".setting.BlackListActivity"></activity>
+        <activity android:name=".setting.CallForwardingActivity" />
+        <activity android:name=".setting.GreetingSettingActivity" />
+        <activity android:name=".setting.VoicesActivity" />
         <activity android:name=".subscribtion.SubscriptionActivity" />
         <activity android:name=".profile.ProfileActivity" />
         <activity android:name=".first_setting.FirstSettingActivity" />
         <activity android:name=".main.MainActivity">
-            <!--            <intent-filter>-->
-            <!--                <action android:name="android.intent.action.MAIN" />-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
-            <!--            </intent-filter>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".registration.RegisterActivity" />
         <activity android:name=".startup.StartupActivity">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
     </application>
 

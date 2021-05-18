@@ -11,6 +11,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.testproject.R;
 import com.example.testproject.main.adapter.RecyclerAccountMenuAdapter;
+import com.example.testproject.setting.BlackListActivity;
+import com.example.testproject.setting.CallForwardingActivity;
+import com.example.testproject.setting.GreetingSettingActivity;
+import com.example.testproject.setting.VoicesActivity;
 import com.example.testproject.utils.objects.AccountItemMenu;
 
 import java.util.ArrayList;
@@ -33,14 +37,31 @@ public class SettingFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_main_setting, container, false);
         rvAccount = view.findViewById(R.id.rv_account);
 
-        rvAccount.setHasFixedSize(true);
-        rvAccount.setLayoutManager(new LinearLayoutManager(getActivity()));
-        RecyclerAccountMenuAdapter adapter = new RecyclerAccountMenuAdapter(createMenuList());
-        rvAccount.setAdapter(adapter);
+        if (getActivity() != null) {
 
-        adapter.setListener(item -> {
+            rvAccount.setHasFixedSize(true);
+            rvAccount.setLayoutManager(new LinearLayoutManager(getActivity()));
+            RecyclerAccountMenuAdapter adapter = new RecyclerAccountMenuAdapter(createMenuList());
+            rvAccount.setAdapter(adapter);
 
-        });
+
+            adapter.setListener(item -> {
+                switch (item.getId()) {
+                    case 1:
+                        VoicesActivity.start(getActivity());
+                        break;
+                    case 2:
+                        GreetingSettingActivity.start(getActivity());
+                        break;
+                    case 5:
+                        CallForwardingActivity.start(getActivity());
+                        break;
+                    case 6:
+                        BlackListActivity.start(getActivity());
+                        break;
+                }
+            });
+        }
 
         return view;
     }

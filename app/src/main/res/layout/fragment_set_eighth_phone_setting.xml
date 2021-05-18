@@ -49,7 +49,7 @@
             android:clipToPadding="false"
             android:overScrollMode="never"
             android:paddingBottom="@dimen/_58sdp"
-            tools:listitem="@layout/item_rv_mobile_operator" />
+            tools:listitem="@layout/item_rv_for_select" />
 
         <RelativeLayout
             android:id="@+id/btn_layout"
