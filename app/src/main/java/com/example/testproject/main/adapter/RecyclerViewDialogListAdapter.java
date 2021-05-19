@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -57,7 +58,7 @@ public class RecyclerViewDialogListAdapter extends RecyclerView.Adapter<Recycler
             holder.imgIcon.setImageResource(itemMenu.getIcon());
             holder.tvTime.setText(itemMenu.getTime());
 
-            holder.itemView.setOnClickListener(v -> {
+            holder.itemLayout.setOnClickListener(v -> {
                 listener.onClickItem(itemMenu);
                 if (!holder.swipeRevealLayout.isClosed()) {
                     holder.swipeRevealLayout.close(true);
@@ -89,6 +90,7 @@ public class RecyclerViewDialogListAdapter extends RecyclerView.Adapter<Recycler
         TextView tvHeader;
 
         SwipeRevealLayout swipeRevealLayout;
+        RelativeLayout itemLayout;
         TextView tvTitle;
         ImageView imgIcon;
         TextView tvDescription;
@@ -103,6 +105,7 @@ public class RecyclerViewDialogListAdapter extends RecyclerView.Adapter<Recycler
             headerLayout = itemView.findViewById(R.id.header_layout);
             tvHeader = itemView.findViewById(R.id.tv_header);
             swipeRevealLayout = itemView.findViewById(R.id.swipe_layout);
+            itemLayout = itemView.findViewById(R.id.item_layout);
             tvTitle = itemView.findViewById(R.id.tv_title);
             imgIcon = itemView.findViewById(R.id.img_icon);
             tvDescription = itemView.findViewById(R.id.tv_description);

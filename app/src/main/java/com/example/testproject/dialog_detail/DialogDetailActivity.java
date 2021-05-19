@@ -14,6 +14,7 @@ public class DialogDetailActivity extends AppCompatActivity {
 
     public static void start(Context context, MainDialogItem dialogItem) {
         Intent intent = new Intent(context, DialogDetailActivity.class);
+        context.startActivity(intent);
     }
 
     @Override
