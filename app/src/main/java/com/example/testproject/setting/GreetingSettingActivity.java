@@ -4,10 +4,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.testproject.R;
@@ -68,7 +72,7 @@ public class GreetingSettingActivity extends AppCompatActivity {
         greeting1Layout.callOnClick();
 
         tvReady.setOnClickListener(v -> finish());
-        btnNext.setOnClickListener(v -> {});
+        btnNext.setOnClickListener(v -> showEditNamePopup());
     }
 
     private void initView() {
@@ -90,5 +94,18 @@ public class GreetingSettingActivity extends AppCompatActivity {
             item.getKey().setBackgroundResource(R.drawable.corner_gray_dialog);
             item.getValue().setTextColor(Color.parseColor("#696969"));
         }
+    }
+
+    private void showEditNamePopup() {
+        View v = getLayoutInflater().inflate(R.layout.dialog_edit_greeting, null, false);
+        EditText editText = v.findViewById(R.id.edit_text);
+
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setView(v)
+                .setPositiveButton("Сохранить", (dialogInterface, i) -> {
+                })
+                .setNegativeButton("Отмена", null)
+                .create();
+        dialog.show();
     }
 }

@@ -1,10 +1,12 @@
 package com.example.testproject.main;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
@@ -75,6 +77,13 @@ public class AccountFragment extends Fragment {
         });
 
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Window window = getActivity().getWindow();
+        window.setStatusBarColor(Color.parseColor("#FFFFFF"));
     }
 
     private void openBottomSheet() {

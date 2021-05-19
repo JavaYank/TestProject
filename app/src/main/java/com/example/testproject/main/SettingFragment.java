@@ -1,9 +1,11 @@
 package com.example.testproject.main;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -64,6 +66,13 @@ public class SettingFragment extends Fragment {
         }
 
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Window window = getActivity().getWindow();
+        window.setStatusBarColor(Color.parseColor("#FFFFFF"));
     }
 
     private List<AccountItemMenu> createMenuList() {

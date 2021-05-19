@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/_16sdp"
+    android:paddingTop="@dimen/_16sdp"
+    android:paddingRight="@dimen/_16sdp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/tt_norms_medium"
+        android:text="Ваше приветствие"
+        android:textColor="#404040"
+        android:textSize="@dimen/_10sdp" />
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/corner_radius_10_gray_edittext"
+        android:ellipsize="end"
+        android:fontFamily="@font/tt_norms_medium"
+        android:hint="Введите ваше приветствие"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="#001AFF"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/_10sdp"
+        tools:ignore="KeyboardInaccessibleWidget" />
+
+</LinearLayout>
