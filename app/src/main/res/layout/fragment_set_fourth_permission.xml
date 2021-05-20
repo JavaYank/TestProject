@@ -66,9 +66,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/img_1"
+            android:layout_alignBottom="@id/img_1"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_alignBottom="@id/img_1"
             android:layout_marginLeft="@dimen/_36sdp"
             android:layout_marginRight="@dimen/_36sdp"
             android:adjustViewBounds="true"
@@ -88,13 +88,14 @@
                 android:layout_height="1dp"
                 android:layout_weight="1" />
 
+<!--            TODO background -->
             <FrameLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/_12sdp"
                 android:layout_marginRight="@dimen/_12sdp"
                 android:layout_weight="1"
-                android:background="@drawable/corner_blue_dialog"
+                android:background="@drawable/corner_blue_dialog_left"
                 android:padding="@dimen/_12sdp">
 
                 <TextView
@@ -126,9 +127,9 @@
                 android:background="@drawable/button_enabled"
                 android:fontFamily="@font/tt_norms_bold"
                 android:text="Продолжить"
-                android:textSize="@dimen/_10sdp"
                 android:textAllCaps="false"
-                android:textColor="#404040" />
+                android:textColor="#404040"
+                android:textSize="@dimen/_10sdp" />
 
             <ProgressBar
                 android:id="@+id/progress_bar"

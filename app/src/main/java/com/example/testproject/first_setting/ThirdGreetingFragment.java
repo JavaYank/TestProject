@@ -61,22 +61,22 @@ public class ThirdGreetingFragment extends Fragment {
 
         greeting1Layout.setOnClickListener(v -> {
             onClickGreeting();
-            greeting1Layout.setBackgroundResource(R.drawable.corner_blue_dialog);
+            greeting1Layout.setBackgroundResource(R.drawable.corner_blue_dialog_left);
             tv1.setTextColor(Color.parseColor("#FFFFFF"));
         });
         greeting2Layout.setOnClickListener(v -> {
             onClickGreeting();
-            greeting2Layout.setBackgroundResource(R.drawable.corner_blue_dialog);
+            greeting2Layout.setBackgroundResource(R.drawable.corner_blue_dialog_left);
             tv2.setTextColor(Color.parseColor("#FFFFFF"));
         });
         greeting3Layout.setOnClickListener(v -> {
             onClickGreeting();
-            greeting3Layout.setBackgroundResource(R.drawable.corner_blue_dialog);
+            greeting3Layout.setBackgroundResource(R.drawable.corner_blue_dialog_left);
             tv3.setTextColor(Color.parseColor("#FFFFFF"));
         });
         greeting4Layout.setOnClickListener(v -> {
             onClickGreeting();
-            greeting4Layout.setBackgroundResource(R.drawable.corner_blue_dialog);
+            greeting4Layout.setBackgroundResource(R.drawable.corner_blue_dialog_left);
             tv4.setTextColor(Color.parseColor("#FFFFFF"));
         });
 

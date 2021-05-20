@@ -1,6 +1,5 @@
 package com.example.testproject.main;
 
-import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,10 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.testproject.R;
 import com.example.testproject.dialog_detail.DialogDetailActivity;
 import com.example.testproject.main.adapter.RecyclerViewDialogListAdapter;
-import com.example.testproject.utils.objects.AccountItemMenu;
-import com.example.testproject.utils.objects.MainDialogItem;
-
-import org.jetbrains.annotations.NotNull;
+import com.example.testproject.utils.objects.MainDialogListItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,17 +41,17 @@ public class DialogListFragment extends Fragment {
         RecyclerViewDialogListAdapter adapter = new RecyclerViewDialogListAdapter(getDialogList());
         adapter.setListener(new RecyclerViewDialogListAdapter.OnItemClickListener() {
             @Override
-            public void onClickItem(MainDialogItem item) {
+            public void onClickItem(MainDialogListItem item) {
                 DialogDetailActivity.start(getActivity(), item);
             }
 
             @Override
-            public void onClickMinus(MainDialogItem item) {
+            public void onClickMinus(MainDialogListItem item) {
                 Toast.makeText(getActivity(), "minus", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onClickDelete(MainDialogItem item) {
+            public void onClickDelete(MainDialogListItem item) {
                 Toast.makeText(getActivity(), "delete", Toast.LENGTH_SHORT).show();
             }
         });
@@ -67,27 +63,27 @@ public class DialogListFragment extends Fragment {
         return view;
     }
 
-    private List<MainDialogItem> getDialogList() {
-        List<MainDialogItem> list = new ArrayList<>();
-        list.add(new MainDialogItem(true, "Сегодня", "", 0, ""));
-        list.add(new MainDialogItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_selected, "15:30"));
-        list.add(new MainDialogItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_not_selected, "15:30"));
-        list.add(new MainDialogItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_selected, "15:30"));
-        list.add(new MainDialogItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_not_selected, "15:30"));
-        list.add(new MainDialogItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_selected, "15:30"));
-        list.add(new MainDialogItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_not_selected, "15:30"));
-        list.add(new MainDialogItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_selected, "15:30"));
-        list.add(new MainDialogItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_not_selected, "15:30"));
+    private List<MainDialogListItem> getDialogList() {
+        List<MainDialogListItem> list = new ArrayList<>();
+        list.add(new MainDialogListItem(true, "Сегодня", "", 0, ""));
+        list.add(new MainDialogListItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_selected, "15:30"));
+        list.add(new MainDialogListItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_not_selected, "15:30"));
+        list.add(new MainDialogListItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_selected, "15:30"));
+        list.add(new MainDialogListItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_not_selected, "15:30"));
+        list.add(new MainDialogListItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_selected, "15:30"));
+        list.add(new MainDialogListItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_not_selected, "15:30"));
+        list.add(new MainDialogListItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_selected, "15:30"));
+        list.add(new MainDialogListItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_not_selected, "15:30"));
 
-        list.add(new MainDialogItem(true, "Вчера", "", 0, ""));
-        list.add(new MainDialogItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_selected, "15:30"));
-        list.add(new MainDialogItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_not_selected, "15:30"));
-        list.add(new MainDialogItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_selected, "15:30"));
-        list.add(new MainDialogItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_not_selected, "15:30"));
-        list.add(new MainDialogItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_selected, "15:30"));
-        list.add(new MainDialogItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_not_selected, "15:30"));
-        list.add(new MainDialogItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_selected, "15:30"));
-        list.add(new MainDialogItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_not_selected, "15:30"));
+        list.add(new MainDialogListItem(true, "Вчера", "", 0, ""));
+        list.add(new MainDialogListItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_selected, "15:30"));
+        list.add(new MainDialogListItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_not_selected, "15:30"));
+        list.add(new MainDialogListItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_selected, "15:30"));
+        list.add(new MainDialogListItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_not_selected, "15:30"));
+        list.add(new MainDialogListItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_selected, "15:30"));
+        list.add(new MainDialogListItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_not_selected, "15:30"));
+        list.add(new MainDialogListItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_selected, "15:30"));
+        list.add(new MainDialogListItem(false, "+7 965 407 00 39", "Привет, увидел ваше объявление на Авито увидел ваше объявление на Авито", R.mipmap.ic_not_selected, "15:30"));
 
         return list;
     }

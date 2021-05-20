@@ -14,17 +14,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.chauthai.swipereveallayout.SwipeRevealLayout;
 import com.chauthai.swipereveallayout.ViewBinderHelper;
 import com.example.testproject.R;
-import com.example.testproject.utils.objects.MainDialogItem;
+import com.example.testproject.utils.objects.MainDialogListItem;
 
 import java.util.List;
 
 public class RecyclerViewDialogListAdapter extends RecyclerView.Adapter<RecyclerViewDialogListAdapter.ViewHolder> {
 
-    private List<MainDialogItem> itemDialog;
+    private List<MainDialogListItem> itemDialog;
     private OnItemClickListener listener;
     private final ViewBinderHelper viewBinderHelper = new ViewBinderHelper();
 
-    public RecyclerViewDialogListAdapter(List<MainDialogItem> itemDialog) {
+    public RecyclerViewDialogListAdapter(List<MainDialogListItem> itemDialog) {
         viewBinderHelper.setOpenOnlyOne(true);
         this.itemDialog = itemDialog;
     }
@@ -36,13 +36,13 @@ public class RecyclerViewDialogListAdapter extends RecyclerView.Adapter<Recycler
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_rv_main_dialog, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_rv_main_dialog_list, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        MainDialogItem itemMenu = itemDialog.get(position);
+        MainDialogListItem itemMenu = itemDialog.get(position);
         viewBinderHelper.bind(holder.swipeRevealLayout, itemMenu.getTitle());
         if (itemMenu.isHeader()) {
             holder.headerLayout.setVisibility(View.VISIBLE);
@@ -116,10 +116,10 @@ public class RecyclerViewDialogListAdapter extends RecyclerView.Adapter<Recycler
     }
 
     public interface OnItemClickListener {
-        void onClickItem(MainDialogItem itemMenu);
+        void onClickItem(MainDialogListItem itemMenu);
 
-        void onClickMinus(MainDialogItem itemMenu);
+        void onClickMinus(MainDialogListItem itemMenu);
 
-        void onClickDelete(MainDialogItem itemMenu);
+        void onClickDelete(MainDialogListItem itemMenu);
     }
 }

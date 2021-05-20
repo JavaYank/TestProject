@@ -2,37 +2,19 @@ package com.example.testproject.utils.objects;
 
 public class MainDialogItem {
 
-    private boolean isHeader;
-    private String title;
-    private String description;
-    private int icon;
-    private String time;
+    private boolean isAutoAnswer;
+    private String message;
 
-    public MainDialogItem(boolean isHeader, String title, String description, int icon, String time) {
-        this.isHeader = isHeader;
-        this.title = title;
-        this.description = description;
-        this.icon = icon;
-        this.time = time;
+    public MainDialogItem(boolean isAutoAnswer, String message) {
+        this.isAutoAnswer = isAutoAnswer;
+        this.message = message;
     }
 
-    public boolean isHeader() {
-        return isHeader;
+    public boolean isAutoAnswer() {
+        return isAutoAnswer;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public int getIcon() {
-        return icon;
-    }
-
-    public String getTime() {
-        return time;
+    public String getMessage() {
+        return message;
     }
 }
